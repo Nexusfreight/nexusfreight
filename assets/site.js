@@ -51,12 +51,12 @@
 
   /* Team slider */
   $$('.slider').forEach(function (s) {
-    var track = $('.track', s), prev = $('.sl-prev', s.parentNode), next = $('.sl-next', s.parentNode);
+    var track = $('.track', s), prevs = $$('.sl-prev', s.parentNode), nexts = $$('.sl-next', s.parentNode);
     if (!track) return;
     function step() { var c = $('.person', track); return c ? c.getBoundingClientRect().width + 16 : 300; }
     function upd() {
-      if (prev) prev.disabled = track.scrollLeft < 4;
-      if (next) next.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 4;
+      prevs.forEach(function (b) { b.disabled = track.scrollLeft < 4; });
+      nexts.forEach(function (b) { b.disabled = track.scrollLeft + track.clientWidth > track.scrollWidth - 4; });
     }
     function go(dir) {
       var from = track.scrollLeft, to = from + dir * step();
@@ -65,8 +65,8 @@
       setTimeout(function () { if (Math.abs(track.scrollLeft - from) < 2) track.scrollTo({ left: to }); upd(); }, 450);
       setTimeout(upd, 900);
     }
-    prev && prev.addEventListener('click', function () { go(-1); });
-    next && next.addEventListener('click', function () { go(1); });
+    prevs.forEach(function (b) { b.addEventListener('click', function () { go(-1); }); });
+    nexts.forEach(function (b) { b.addEventListener('click', function () { go(1); }); });
     track.addEventListener('scroll', upd, { passive: true }); window.addEventListener('resize', upd); upd();
   });
 
