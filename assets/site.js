@@ -25,13 +25,9 @@
     d.classList.toggle('menu-open', open);
   }
   if (btn) {
-    btn.addEventListener('click', function () {
-      var open = btn.getAttribute('aria-expanded') !== 'true';
-      // menu covers the screen from the header down: scroll the utility bar out of view first
-      var u = $('.utility'), uh = u ? u.offsetHeight : 0;
-      if (open && window.scrollY < uh) window.scrollTo(0, uh);
-      setMenu(open);
-    });
+    btn.addEventListener('click', function () { setMenu(btn.getAttribute('aria-expanded') !== 'true'); });
+    var close = $('.menu-close', panel);
+    close && close.addEventListener('click', function () { setMenu(false); btn.focus(); });
     $$('a', panel).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
     mobile.addEventListener && mobile.addEventListener('change', function (e) { if (!e.matches) setMenu(false); });
