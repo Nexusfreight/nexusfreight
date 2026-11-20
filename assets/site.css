@@ -801,3 +801,19 @@ html:not(.figma) .legal-toc, html:not(.figma) .toc { position: sticky; top: 104p
   .cta .office-list .k { flex: 0 0 58px; font-size: 10.5px; }
   .cta .office-list .v { font-size: 15px; }
 }
+
+/* Review fixes (21.11) */
+.prose a.btn { color: #FFFFFF; text-decoration: none; }
+@media (max-width: 760px) {
+  /* blocks that stack on phones: children keep their content height
+     (flex-basis 0 + overflow:hidden collapsed the lane map, the office card and the map embed) */
+  .lanes-wrap > *, .office-row > *, .spec-wrap > *, .faq-wrap > *, .two-col > *, .vet-mini > *, .art-layout > *,
+  .legal-wrap > *, .page-hero-inner.split > *, .e404-inner > *, .msteps > *, .rel > *, .lic > *, .quotes > *,
+  .proof-row > *, .cta > *, .vet > * { flex: none; }
+  .map-card { margin: 0; }
+  .office-row > .office, .office-row > .map-embed, .lanes-wrap > .map-card, .lanes-wrap > .sec-head { flex: none; }
+  /* shorter forms on phones: ZIP + ZIP side by side, ZIP/ZIP/equipment/date as 2 × 2 */
+  .qs-row { flex-direction: row; }
+  .form-row:has(> .field:nth-child(4)) { flex-direction: row; flex-wrap: wrap; }
+  .form-row:has(> .field:nth-child(4)) > .field { flex: 1 1 calc(50% - 6px); }
+}
