@@ -766,8 +766,7 @@ html:not(.figma) .legal-toc, html:not(.figma) .toc { position: sticky; top: 104p
   .cta-line .tel { white-space: nowrap; }
 
   /* 4. phone menu: full screen from the very top, everything fits without scrolling */
-  html.menu-open .utility { display: none; }
-  html.menu-open, html.menu-open body { overflow: hidden; }
+  /* the utility bar is scrolled out of view when the menu opens (site.js), so the header sits at the top */
   .mnav { position: fixed; top: 65px; left: 0; right: 0; bottom: 0; max-height: none; overflow: hidden; padding: 6px 20px 20px; box-shadow: none; }
   .mnav > a, .mnav .m-h { font-size: 18px; padding: 11px 0; }
   .mnav .m-h { padding-bottom: 4px; }
