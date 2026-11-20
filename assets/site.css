@@ -832,3 +832,11 @@ html:not(.figma) .legal-toc, html:not(.figma) .toc { position: sticky; top: 104p
   .mnav .m-meta { display: block; }
   .mnav .m-foot { gap: 8px; }
 }
+
+/* Hero eyebrow on phones: "Freight brokerage" on its own line (21.11) */
+.m-br { display: none; }
+@media (max-width: 760px) {
+  .hero-copy .eyebrow .ey-sep { display: none; }
+  .hero-copy .eyebrow .m-br { display: inline; }
+  .hero-copy .eyebrow { line-height: 1.6; }
+}
