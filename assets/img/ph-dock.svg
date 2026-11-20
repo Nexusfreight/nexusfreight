@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#E9E6E0"/><stop offset="1" stop-color="#DCD8D0"/></linearGradient></defs>
+<rect width="480" height="360" fill="url(#g)"/>
+<rect x="12" y="12" width="456" height="336" fill="none" stroke="#BDB8AE" stroke-width="1.5" stroke-dasharray="8 7"/>
+<rect x="220.0" y="74.0" width="40" height="28" rx="5" fill="none" stroke="#D53B0D" stroke-width="2"/><circle cx="240.0" cy="88.0" r="7.5" fill="none" stroke="#D53B0D" stroke-width="2"/>
+<text x="240.0" y="134.0" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.6" fill="#D53B0D" text-anchor="middle">PHOTO PLACEHOLDER · 480×360</text>
+<text x="240.0" y="162.0" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="600" fill="#2A2E35" text-anchor="middle">Dock: a carrier backing into a shipper's door</text>
+<text x="240.0" y="188.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#6B6F76" text-anchor="middle">Real loading dock in Chicagoland, trailer doors open, dock</text>
+<text x="240.0" y="210.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#6B6F76" text-anchor="middle">plate down, forklift or pallets visible inside. Daylight, wide</text>
+<text x="240.0" y="232.0" font-family="Inter, Arial, sans-serif" font-size="14" fill="#6B6F76" text-anchor="middle">angle, no readable carrier or customer branding.</text>
+</svg>
